@@ -1,7 +1,8 @@
 import React from "react";
 import ProductList from "./components/ProductList";
 import Wishlist from "./components/Wishlist";
-import Cart from "./components/Cart";
+
+import Carts from "./components/Carts";
 
 const App = () => {
   return (
@@ -12,7 +13,7 @@ const App = () => {
       <div style={{ flex: 1 }}>
         <Wishlist />
         <hr />
-        <Cart />
+        <Carts />
       </div>
     </div>
   );

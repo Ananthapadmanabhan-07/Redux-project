@@ -1,12 +1,13 @@
-import React from "react";
+import React from 'react'
 import { useSelector, useDispatch } from "react-redux";
 import { removeFromCart, clearCart } from "../redux/slice/cartSlice";
 
-const Cart = () => {
+
+function Carts() {
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart.items);
 
-  if (cartItems.length === 0) return <p>Your cart is empty.</p>;
+  if (cartItems.length === 0) return <p className="bg-yellow-600 mt-5">Your cart is empty.</p>;
 
   const totalPrice = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0)
 
@@ -36,6 +37,6 @@ const Cart = () => {
       </button>
     </div>
   );
-};
+}
 
-export default Cart
+export default Carts

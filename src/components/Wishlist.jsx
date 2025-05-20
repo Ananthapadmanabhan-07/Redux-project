@@ -7,7 +7,7 @@ const Wishlist = () => {
   const dispatch = useDispatch();
   const wishlistItems = useSelector((state) => state.wishlist.items);
 
-  if (wishlistItems.length === 0) return <p>Your wishlist is empty.</p>;
+  if (wishlistItems.length === 0) return <p className="bg-red-600 "> empty wishlist </p>;
 
   return (
     <div>
